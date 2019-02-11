@@ -1,0 +1,87 @@
+* { 
+    box-sizing: border-box;
+    padding: 0; margin:0;
+}
+
+*:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.todo-wrapper {
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+    margin-top: 150px;
+    width: 400px;
+
+    .title {
+        text-align: center ;
+        height: 64px;
+        font-weight: bold;
+        font-size:16px;
+    }
+
+    .title:before {
+        content: url("./icon-64.png") no-repeat;
+        width:64px;
+        height:64px;
+    }
+
+    .offline {
+        border: 1px solid black;
+        font-weight: 700;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+        color: red;
+        display: block;
+    }
+    
+
+    .add-todo {
+        padding: 10px;
+        input {
+            width: 100%;
+            padding: 10px;
+            border:1px solid #000;
+            border-radius: 10px;
+        }
+
+        input:focus {
+            box-shadow: none;
+        }
+    }
+
+    .todo-list {
+        width: 100%;
+            ul {
+            list-style: none;
+            li {
+                padding: 10px;
+                border-bottom: 1px solid grey;
+            }
+
+            li:hover {
+                background:rgb(245, 243, 243);
+                
+            }
+
+            li:before{
+                content: '✓';
+                padding: 10px;
+            }
+
+            a.delete {
+                float:right;
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                font-weight:bold;
+            }
+        }
+    }
+}   
